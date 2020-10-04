@@ -42,7 +42,7 @@ public class FileOperations {
         {
         	if(listOfFiles[i].getName().equalsIgnoreCase(fileName))
         	{
-        		System.out.println("file "+fileName+"found ");
+        		System.out.println("file "+fileName+" found ");
         		fileFound = true;
         		break;
         	}

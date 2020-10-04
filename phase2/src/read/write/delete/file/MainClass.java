@@ -35,8 +35,12 @@ while(condition)
 			break;
 		case "2":
 			condition = true;
-			menu.displayAvailableOptions();
-			String option = filescan.next();
+			boolean showSubMenu = true;
+			while(showSubMenu)
+			{
+				menu.displayAvailableOptions();
+				String option = filescan.next();
+				
 			switch(option)
 			{
 			case "1":
@@ -46,22 +50,26 @@ while(condition)
 				options.fileContent();
 				insertContent(fileName);
 				break;
-			case "2":
+			case "3":
 				options.searchFile();
 				String fileNameToSearch = filescan.next();
 				fileOperations.searchFile(fileNameToSearch);
 				condition = true;
 				break;
-			case "3":
+			case "2":
 				options.deleteFile();
 				String fileNameToDel = filescan.next();
 				fileOperations.deleteFile(fileNameToDel);
 				break;
+			case "4":
+				showSubMenu = false;
+				break;
+				
 			 default:
 				 options.inValidOtion();
 			     break;
 			}
-			
+		}
 			break;
 		case "3":
 			condition = false;
