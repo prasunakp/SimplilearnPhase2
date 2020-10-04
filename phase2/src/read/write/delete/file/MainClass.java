@@ -90,8 +90,8 @@ while(condition)
 			String content = input.readLine();
 			fileOperations.insertContentInToFile(fileName, content);
 		} catch (IOException e) {
-			e.printStackTrace();
-		}
+			options.error();
+			}
 
 		
 	}
@@ -108,7 +108,7 @@ while(condition)
 			options.fileFailure();
 			}
 		} catch (IOException e) {
-			options.fileFailure();
+			options.error();
 		}
 		
 	}

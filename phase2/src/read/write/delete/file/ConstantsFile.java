@@ -22,5 +22,6 @@ public class ConstantsFile {
 	
 	public static final String FILE_FAILURE = "sorry there is an other file with the same name.";
 	
-	
+	public static final String ERROR = "Sorry some error occurred. Please try again";
+
 }

@@ -51,4 +51,8 @@ public class DisplayOptions {
 	{
 		System.out.println(ConstantsFile.DELETE_FILE);
 	}
+	public void error()
+	{
+		System.out.println(ConstantsFile.ERROR);
+	}
 }
