@@ -1,0 +1,37 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>UserTransaction</servlet-name>
+  	<display-name>UserTransaction</display-name>
+  	<description></description>
+  	<servlet-class>com.simplilearn.register.UserTransaction</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>CustomerRegistrationAndPayment</servlet-name>
+  	<display-name>CustomerRegistrationAndPayment</display-name>
+  	<description></description>
+  	<servlet-class>com.simplilearn.register.CustomerRegistrationAndPayment</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AdminPage</servlet-name>
+  	<display-name>AdminPage</display-name>
+  	<description></description>
+  	<servlet-class>com.simplilearn.register.AdminPage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>UserTransaction</servlet-name>
+  	<url-pattern>/UserTransaction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>CustomerRegistrationAndPayment</servlet-name>
+  	<url-pattern>/CustomerRegistrationAndPayment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AdminPage</servlet-name>
+  	<url-pattern>/AdminPage</url-pattern>
+  </servlet-mapping>
+</web-app>
