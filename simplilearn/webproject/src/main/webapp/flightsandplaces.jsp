@@ -4,7 +4,6 @@
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
     <div align="center">
 
-<li><a href="error.jsp" target="middle.jsp" disabled="true" name="res">Results</a></li>
 
         <table border="1" cellpadding="5">
             <caption><h2>List of Flights</h2></caption>
@@ -13,6 +12,7 @@
                 <th>Name</th>
                 <th>Source</th>
                 <th>Destination</th>
+ <th>Price</th>
 
             </tr>
  <%
@@ -24,6 +24,8 @@
                     <td><%out.print(flight.getFlightName()); %></td>
                     <td><%out.print(flight.getSource()); %></td>
                     <td><%out.print(flight.getDestination());%></td>   
+                    <td><%out.print(flight.getPrice());%></td>   
+
                 </tr>
        
   <% }%>
@@ -41,6 +43,26 @@
                 <tr>
                     <td><%out.print(place.getSource()); %></td>
                     <td><%out.print(place.getDestination());%></td>   
+                </tr>
+       
+  <% }%>
+   </table>
+  <table border="1" cellpadding="5">
+            <caption><h2>List of AirLines</h2></caption>
+<tr>
+               
+                <th>Name</th>
+
+            </tr>
+ <%
+            List<FlightModel> airLines = (List<FlightModel>)session.getAttribute("allflights");
+            for(FlightModel flight : listOfFlights)
+            { %>
+                <tr>
+                  
+                    <td><%out.print(flight.getFlightName()); %></td>
+              
+
                 </tr>
        
   <% }%>
